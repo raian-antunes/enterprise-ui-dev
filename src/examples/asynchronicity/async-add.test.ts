@@ -16,14 +16,14 @@ it('passes if use an `async/await`', async () => {
   expect(result).toBe(5);
 });
 
-it('passes if we expect it to resolve', () => {
+it('passes if we expect it to resolve', async () => {
   const result = addAsync(2, 3);
-  expect(result).resolves.toBe(5);
+  await expect(result).resolves.toBe(5);
 });
 
-it('passes if we expect to reject', () => {
+it('passes if we expect to reject', async () => {
   const result = onlyEvenNumbers(5);
-  expect(result).rejects.toBe(5);
+  await expect(result).rejects.toBe(5);
 });
 
 it('allows us to catch the error in an async/await', async () => {

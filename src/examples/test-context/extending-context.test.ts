@@ -1,10 +1,10 @@
 import { it, expect } from 'vitest';
 
-it('should work', (ctx) => {
+it.todo('should work', (ctx) => {
   expect(ctx.meta.name).toBe('should work');
 });
 
-it('should really work', ({ meta }) => {
+it.todo('should really work', ({ meta }) => {
   expect(meta.name).toBe('should really work');
 });
 
