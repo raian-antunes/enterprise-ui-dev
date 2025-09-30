@@ -34,7 +34,7 @@ const itemsSlice = createSlice({
       if (item) items.splice(items.indexOf(item), 1);
     },
     markAllAsUnpacked(items) {
-      return items.forEach((item) => (item.packed = false));
+      items.forEach((item) => (item.packed = false));
     },
   },
 });
